@@ -1,0 +1,19 @@
+{
+  "name": "beckylewis-portfolio",
+  "version": "1.0.0",
+  "description": "Becky Lewis Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rlewis612/beckylewis-portfolio.git"
+  },
+  "author": "Becky Lewis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rlewis612/beckylewis-portfolio/issues"
+  },
+  "homepage": "https://github.com/rlewis612/beckylewis-portfolio"
+}
