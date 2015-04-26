@@ -44,8 +44,7 @@ blockquote, q {
   quotes: "" ""; }
 
 /* end zero out styles */
-/** Sass Variables **/
-/** General Styles **/
+/** GENERAL STYLES **/
 .clearfix:after {
   content: "";
   display: table;
@@ -106,17 +105,20 @@ p, li {
 p, ul, .logo, .header-md {
   margin-bottom: 20px; }
 
-.header-sm, .header-social, .header-job, .highlight {
+.header-sub, .header-sm, .header-social, .header-job, .highlight {
   color: #F4A854; }
 
 .button-close-slide, .slide > p {
   float: right; }
 
+.tabs-resume > a, .link-back {
+  text-decoration: none; }
+
 li {
   list-style-type: disc;
   margin-left: 40px; }
 
-/** Text Styles **/
+/** TEXT STYLES **/
 .current {
   margin-left: -20px; }
 
@@ -132,7 +134,7 @@ li {
 .header-lg, .header-sm, .header-social {
   font-family: "Rock Salt", serif; }
 
-.header-md, .header-sm, .header-social {
+.header-md, .header-sm, .header-social, .header-sub {
   line-height: 1.6em; }
 
 .header-lg {
@@ -142,6 +144,11 @@ li {
 
 .header-md {
   font-size: 1.1em; }
+
+.header-sub {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 1.6em; }
 
 .header-social {
   display: inline-block;
@@ -181,7 +188,7 @@ li {
 .message-error {
   color: red; }
 
-/** Link Styles **/
+/** LINK STYLES **/
 a {
   color: #F4A854; }
 
@@ -191,7 +198,12 @@ a {
   padding: 15px 8px;
   border-top: 1px solid #202020; }
 
-/* Button Styles */
+.link-back {
+  display: block;
+  clear: both;
+  float: left; }
+
+/* BUTTON STYLES */
 .button-menu, .button-close, .button-close-slide, .grid, #grid-contact, button, .box-icon-mobile, .box-icon-weblayout, .box-icon-ux, .box-icon-notepad, .box-icon-smiley, .box-icon-weblink, .box-icon-pencil, .box-icon-heart, .box-icon-type, .img-uparrow, .overlay {
   cursor: pointer; }
 
@@ -220,7 +232,7 @@ button {
 button[type="submit"], .print {
   margin-right: 10px; }
 
-/** Image Styles **/
+/** IMAGE STYLES **/
 .box-icon-mobile, .box-icon-weblayout, .box-icon-ux, .box-icon-notepad, .box-icon-smiley, .box-icon-weblink, .box-icon-pencil, .box-icon-heart, .box-icon-type {
   background: url(../img/icon-sprites.png);
   background-size: 125px;
@@ -274,9 +286,13 @@ button[type="submit"], .print {
   background-position: -38px 0; }
 
 .thumbnail {
-  width: 75%; }
+  width: 80%;
+  margin-bottom: 20px; }
 
-/** Main Styles **/
+.img-pf {
+  width: 100%; }
+
+/** MAIN CONTENT STYLES **/
 .indent {
   margin-left: 20px; }
 
@@ -309,12 +325,20 @@ button[type="submit"], .print {
   flex-wrap: wrap;
   justify-content: space-between; }
 
-.flextbox > p {
-  width: 100%;
+.flexbox-pfwebsites {
+  justify-content: space-around; }
+
+.flexbox > p {
   margin: auto; }
 
 .box-center {
   margin-top: 30px; }
+
+.box-websiteimg {
+  width: 100%; }
+
+.box-mobileimg {
+  width: 60%; }
 
 #box-social {
   margin-bottom: 60px; }
@@ -324,9 +348,6 @@ button[type="submit"], .print {
 
 .tabs-resume {
   color: #F4A854; }
-
-.tabs-resume > a {
-  text-decoration: none; }
 
 .tabs-resume {
   margin-top: 30px; }
@@ -429,7 +450,7 @@ label {
   font-family: "Gloria Hallelujah", "Open Sans", Arial, sans-serif;
   font-size: 1em; }
 
-/** Animations **/
+/** ANIMATIONS **/
 /* Function - Animation Properties */
 /* Button hover - Demonstrating hover effects using css animations and mixins */
 button:hover {
@@ -569,8 +590,11 @@ button:hover {
     justify-content: space-around; }
 
   .thumbnail {
-    width: 150px; } }
+    width: 155px; } }
 @media screen and (min-width: 768px) {
+  .col-twothird, .aside-rtext, .box-websiteimg, .box-mobileimg {
+    float: left; }
+
   .header-interests, label {
     margin-left: 0;
     padding-left: 8px; }
@@ -585,12 +609,21 @@ button:hover {
   .box-contact-btns {
     margin-left: 0; }
 
+  .box-websiteimg, .box-mobileimg {
+    display: block; }
+
+  .box-websiteimg {
+    width: 64%;
+    margin-right: 20px; }
+
+  .box-mobileimg {
+    width: 30%; }
+
   .wrapper-header, .wrapper-main, #wrapper-main-home, .col-twothird {
     width: 60%; }
 
   .col-twothird, .aside-rtext {
-    display: inline-block;
-    float: left; }
+    display: inline-block; }
 
   .current:before {
     content: ""; }
