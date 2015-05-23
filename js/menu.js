@@ -1,32 +1,35 @@
 (function($, window, document) {
 
-	window.CWEB = window.CWEB || {};
+	window.PORTFOLIO = window.PORTFOLIO || {};
 
-	CWEB.Menus = {
+	PORTFOLIO.Menu = {
 
 		init: function() {
 
 			this.btnOpen = $('.button-menu');
+			this.btnClose = $('.button-close');
 			this.menu = $('.nav-main');
+
 			this.bindEvents();
 
 		},
 
 		bindEvents: function() {
 
-			this.btnOpen.on('click', $.proxy(this.openMenu, this));
+			this.btnOpen.on('click', $.proxy(this.toggleMenu, this));
+			this.btnClose.on('click', $.proxy(this.toggleMenu, this));
 
 		}, 
 
-		openMenu: function() {
+		toggleMenu: function(e) {
 
+			e.preventDefault();
+			this.btnOpen.toggle();
+			this.btnClose.toggle();
 			this.menu.slideToggle('slow');
 
 		}
 
-
 	}
-
-	CWEB.Menus.init();
 
 })(jQuery, window, document);

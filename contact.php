@@ -2,6 +2,8 @@
 <html>
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name = "description" content="Contact Becky Lewis. Becky is a web designer/developer currently seeking a new career opportunity in Northwest Arkansas.">
+	<meta name="keywords" content="becky lewis, contact, resume, portfolio, web designer, web developer, website, websites, design, arkansas, rogers, fayetteville, lowell, bentonville, springdale, job, opportunity, career, candidate, employment, javascript, jquery, sass, hire me, student, jccc, web technologies, mobile first, mobile-friendly, ux, ui">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>Contact Becky Lewis | Web Designer Portfolio</title>
 	<link href='http://fonts.googleapis.com/css?family=Raleway:300,400,700' rel='stylesheet' type='text/css'>
@@ -112,6 +114,7 @@
 		ga('send', 'pageview');
 	</script>
 	<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
-	<script type="text/javascript" src="js/code.js"></script>
+	<script type="text/javascript" src="js/portfolio.min.js"></script>
+	<script type="text/javascript" src="js/global.js"></script>
 </body>
 </html>

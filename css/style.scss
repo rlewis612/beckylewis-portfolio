@@ -1,7 +1,6 @@
 @charset 'UTF-8';
 @import 'reset';
 
-/** Sass Variables **/
 $fontStack: 'Open Sans', Arial, sans-serif;
 $header: 'Rock Salt', serif;
 $handwriting: 'Gloria Hallelujah', 'Open Sans', Arial, sans-serif;
@@ -13,7 +12,7 @@ $gridBorder: 1px dashed #ffffff;
 $mobilePadding:20px;
 
 
-/** General Styles **/
+/** GENERAL STYLES **/
 
 .clearfix:after{
 	content: ""; 
@@ -79,11 +78,14 @@ p, li {
 p, ul, .logo, .header-md {
 	margin-bottom:20px;
 }
-.header-sm, .header-job, .highlight {
+.header-sub, .header-sm, .header-job, .highlight {
 	color:$accentOrange;
 }
 .button-close-slide, .slide > p {
 	float:right;
+}
+%tabs > a, .link-back {
+	text-decoration:none;
 }
 li {
 	list-style-type:disc;
@@ -91,7 +93,8 @@ li {
 }
 
 
-/** Text Styles **/
+
+/** TEXT STYLES **/
 
 .current {
 	margin-left:-20px;
@@ -108,7 +111,7 @@ li {
 .header-lg, .header-sm {
 	font-family:$header;
 }
-.header-md, .header-sm {
+.header-md, .header-sm, .header-sub {
 	line-height:1.6em;
 }
 .header-lg {
@@ -118,6 +121,11 @@ li {
 }
 .header-md {
 	font-size:1.1em;
+}
+.header-sub {
+	margin-top:40px;
+	margin-bottom:40px;
+	font-size:1.6em;
 }
 .header-social {
 	@extend .header-sm;
@@ -164,7 +172,7 @@ li {
 }
 
 
-/** Link Styles **/
+/** LINK STYLES **/
 a {
 	color:$accentOrange;
 }
@@ -174,8 +182,13 @@ a {
 	padding:15px 8px;
 	border-top:1px solid $mainGray;
 }
+.link-back {
+	display:block;
+	clear:both;
+	float:left
+}
 
-/* Button Styles */
+/* BUTTON STYLES */
 %button {
 	cursor:pointer;
 }
@@ -209,7 +222,7 @@ button[type="submit"], .print {
 }
 
 
-/** Image Styles **/
+/** IMAGE STYLES **/
 %box-icon {
 	@extend %button;
 	background:url(../img/icon-sprites.png);
@@ -272,11 +285,15 @@ button[type="submit"], .print {
 }
 .thumbnail {
 	@extend %center;
-	width:75%;
+	width:80%;
+	margin-bottom:20px;
+}
+.img-pf {
+	width:100%;
 }
 
 
-/** Main Styles **/
+/** MAIN CONTENT STYLES **/
 .indent {
 	margin-left:20px;
 }
@@ -312,12 +329,20 @@ button[type="submit"], .print {
 	flex-wrap:wrap;
 	justify-content:space-between;
 }
-.flextbox > p {
-	width:100%;
+.flexbox-pfwebsites {
+	justify-content:space-around;
+}
+.flexbox > p {
 	margin:auto;
 }
 .box-center {
 	margin-top:30px;
+}
+.box-websiteimg {
+	width:100%;
+}
+.box-mobileimg {
+	width:60%;
 }
 #box-social {
 	margin-bottom:60px;
@@ -327,9 +352,6 @@ button[type="submit"], .print {
 }
 %tabs {
 	color:$accentOrange;
-}
-%tabs > a {
-	text-decoration:none;
 }
 .tabs-resume {
 	@extend %tabs;
@@ -351,6 +373,7 @@ button[type="submit"], .print {
 	font-size:0.8em;
 	text-transform:uppercase;
 }
+// Homepage grid workaround, prevent other grid slide outs
 .overlay {
 	@extend %button;
 	display:block;
@@ -455,7 +478,7 @@ label {
 	@include placeholderStyle($handwriting, #205d8e, 1em);
 }
 
-/** Animations **/
+/** ANIMATIONS **/
 
 /* Function - Animation Properties */
 
@@ -589,11 +612,14 @@ button:hover {
 		justify-content:space-around;
 	}
 	.thumbnail {
-		width:150px;
+		width:155px;
 	}
 }
 
 @media screen and (min-width:768px) {
+	.col-twothird, %aside-sidebar, .box-websiteimg, .box-mobileimg {
+		float:left;
+	}
 	.header-interests, label {
 		margin-left:0;
 		padding-left:8px;
@@ -608,12 +634,21 @@ button:hover {
 	.box-contact-btns {
 		margin-left:0;
 	}
+	.box-websiteimg, .box-mobileimg {
+		display:block;
+	}
+	.box-websiteimg {
+		width:64%;
+		margin-right:20px;
+	}
+	.box-mobileimg {
+		width:30%;
+	}
 	%wrapper, .col-twothird {
 		width:60%;
 	}
 	.col-twothird, %aside-sidebar {
 		display:inline-block;
-		float:left;
 	}
 	.current:before {
 		content:"";
